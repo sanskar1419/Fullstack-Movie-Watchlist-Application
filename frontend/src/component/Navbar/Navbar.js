@@ -19,6 +19,7 @@ function Navbar() {
           <div>About</div>
         </div>
       </div>
+      {/* <!--User Container--!> */}
       <div className={styles.userSection}>
         <div className={styles.userName}>Hi! Sara</div>
         <div className={styles.addToWatchList}>SR</div>
