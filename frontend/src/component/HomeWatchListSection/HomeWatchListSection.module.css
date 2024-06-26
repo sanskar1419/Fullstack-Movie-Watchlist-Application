@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .leftContainer {
@@ -33,7 +34,7 @@
 
 .ratings {
   background: linear-gradient(90deg, rgb(252, 252, 7), rgb(246, 230, 10));
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: black;
   padding: 5px;
   border-radius: 5px;
@@ -41,11 +42,13 @@
   align-items: center;
   justify-content: center;
   width: 15%;
+  font-weight: 900;
+
   /* position: absolute;
   bottom: 0; */
 }
 .star {
-  width: 40px;
+  width: 30px;
   margin-left: 5px;
   /* position: absolute; */
   /* border: 1px solid black; */
@@ -90,4 +93,54 @@
 .rightContainer img {
   width: 100%;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.backButton {
+  position: absolute;
+  width: 40px;
+  bottom: 20px;
+  right: 100px;
+  cursor: pointer;
+  transition: 0.5 all;
+}
+
+.nextButton {
+  position: absolute;
+  width: 40px;
+  bottom: 20px;
+  right: 50px;
+  cursor: pointer;
+  transition: 0.5 all;
+}
+
+.slider {
+  position: absolute;
+  bottom: 15px;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.slider input {
+  font: inherit;
+  color: currentColor;
+  width: 0.6em;
+  height: 0.6em;
+  border: 0.15em solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  background: red;
+  outline: none;
+  transition: 0.5 all;
+}
+
+.slider input:focus {
+  transform: scale(1.1);
+}
+
+.nextButton:focus {
+  transform: scale(1.1);
+}
+
+.backButton:focus {
+  transform: scale(1.1);
 }
