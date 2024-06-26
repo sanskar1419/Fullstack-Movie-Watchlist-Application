@@ -15,6 +15,7 @@
 .heading1 {
   font-weight: 600;
   color: gray;
+  word-break: break-all;
 }
 
 .heading2 {

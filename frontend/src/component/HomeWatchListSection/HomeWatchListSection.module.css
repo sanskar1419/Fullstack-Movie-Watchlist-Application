@@ -1,0 +1,92 @@
+.mainContainer {
+  width: auto;
+  height: 90vh;
+  background: linear-gradient(45deg, #1a103d, navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftContainer {
+  width: 50%;
+  /* border: 2px solid white; */
+  color: white;
+  margin-right: 5%;
+}
+
+.heading1 {
+  font-weight: 900;
+  font-size: 2.2rem;
+  position: relative;
+}
+
+.para {
+  width: auto;
+  /* height: 150px; */
+  text-align: justify;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.ratings {
+  background: linear-gradient(90deg, rgb(252, 252, 7), rgb(246, 230, 10));
+  font-size: 1.3rem;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  /* position: absolute;
+  bottom: 0; */
+}
+.star {
+  width: 40px;
+  margin-left: 5px;
+  /* position: absolute; */
+  /* border: 1px solid black; */
+  /* margin-top: 20px; */
+}
+.buttonContainer {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.forward {
+  width: 40px;
+  margin-left: 20px;
+}
+
+.moreDetailsButton {
+  padding: 10px 30px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, black, navy);
+  color: white;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rightContainer {
+  width: 23%;
+  /* border: 2px solid white; */
+  height: 80%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightContainer img {
+  width: 100%;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+}
