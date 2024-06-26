@@ -1,0 +1,24 @@
+.footer {
+  background: linear-gradient(45deg, #09041d, rgb(18, 18, 73));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.upperPart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 700;
+}
+
+.horizontalList a {
+  margin-right: 15px;
+  cursor: pointer;
+}

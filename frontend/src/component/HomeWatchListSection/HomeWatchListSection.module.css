@@ -28,6 +28,7 @@
   overflow: hidden;
   word-break: break-all;
   word-wrap: break-word;
+  color: rgb(178, 168, 168);
 }
 
 .ratings {
