@@ -39,10 +39,20 @@ function LeftContainer() {
       <hr />
       <div className={styles.listHeading}>My watch lists</div>
       <div className={`${styles.listItems} no-scrollbar`}>
-        <div className={styles.listItem}>
+        <NavLink
+          to={`/watchlist/${1}`}
+          className={styles.listItem}
+          style={({ isActive }) => ({
+            background: isActive ? "yellow" : "transparent",
+            color: isActive ? "#070717" : "white",
+            boxShadow: isActive
+              ? "0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2)"
+              : "none",
+          })}
+        >
           <div className={styles.listItemlogo}>M</div>
           <span className={styles.listItemText}>My Fav. Movie</span>
-        </div>
+        </NavLink>
       </div>
       <div className={styles.userProfile}>
         <img src={userImage} alt="user" />

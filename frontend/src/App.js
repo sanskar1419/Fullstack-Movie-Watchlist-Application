@@ -8,6 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import WatchList from "./page/WatchList/WatchList";
+import MyWatchList from "./page/MyWatchList/MyWatchList";
 
 function App() {
   const router = createBrowserRouter([
@@ -22,8 +23,12 @@ function App() {
       ],
     },
     {
-      path: "watchlist",
+      path: "/watchlist",
       element: <WatchList />,
+    },
+    {
+      path: "/watchlist/:id",
+      element: <MyWatchList />,
     },
   ]);
   return (

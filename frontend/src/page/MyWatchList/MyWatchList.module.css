@@ -1,0 +1,239 @@
+.mainContainer {
+  width: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightContainer {
+  width: 75%;
+  height: 100vh;
+  background: linear-gradient(45deg, #1a103d, navy);
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.para1 {
+  width: 95%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: gray;
+  margin-top: 10px;
+}
+
+.popularMovieContainer {
+  width: 95%;
+  /* border: 2px solid black; */
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(45deg, #151516, rgb(24, 21, 78));
+  color: white;
+  /* min-height: 100vh; */
+  height: auto;
+  /* max-height: 500vh; */
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.popularMovieHeading {
+  width: 95%;
+  margin-top: 15px;
+  color: rgb(217, 209, 209);
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-left: 5px solid yellow;
+  padding-left: 10px;
+}
+
+.filterMenuContainer {
+  width: 95%;
+  display: flex;
+  align-items: center;
+}
+
+.menuList {
+  background: linear-gradient(45deg, #151516, #070717);
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.menuItem {
+  padding: 8px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2); */
+}
+
+.selected {
+  background: yellow;
+  color: black;
+  font-weight: 600;
+}
+
+.movieContainer {
+  /* border: 2px solid white; */
+  margin-top: 15px;
+  width: 92%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 15px;
+  /* flex-wrap: wrap; */
+}
+
+.movieItem {
+  width: 100%;
+  /* height: 30%; */
+  /* border: 2px solid white; */
+  margin-bottom: 30px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #151516, #0b0b18);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+  position: relative;
+  border-radius: 10px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.serialNumberContainer {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movieImageContainer {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movieImageContainer img {
+  width: 60%;
+  height: 130px;
+  /* border: 2px solid white; */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.movieNameContainer {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid white; */
+}
+
+.movieYearContainer {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movieRatingsContainer {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleContainer {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid white; */
+  border-radius: 10px;
+  margin-right: 10px;
+  background: rgb(203, 33, 33);
+  color: #0b0b18;
+  font-size: 0.8rem;
+  padding: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* ...................................................................... */
+
+.poster {
+  width: 100%;
+  height: 75%;
+  cursor: pointer;
+}
+.detailsContainer {
+  width: 100%;
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 1px solid white; */
+  height: 16%;
+}
+
+.posterHeading {
+  font-size: 0.5rem;
+  width: 100%;
+  text-align: center;
+  text-overflow: ellipsis;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  word-wrap: break-word;
+  height: 30%;
+  /* border: 2px solid blue; */
+}
+
+.para {
+  font-size: 0.5rem;
+  width: 100%;
+  text-align: center;
+  text-overflow: ellipsis;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.ratingContainer {
+  width: 100%;
+  height: 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.rating img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.rating span {
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+.star {
+  width: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
