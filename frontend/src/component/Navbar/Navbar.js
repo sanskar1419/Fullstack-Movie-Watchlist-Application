@@ -1,6 +1,6 @@
 import styles from "./Navbar.module.css";
 import logo from "../../assets/images/logo.png";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -16,8 +16,13 @@ function Navbar() {
         {/* <!--Nav Item Container--!> */}
         <div className={styles.navItemContainer}>
           <div className={styles.navList}>
-            <div>Home</div>
-            <div>Watch List</div>
+            <Link to="/">
+              <div>Home</div>
+            </Link>
+            <Link to="/watchlist">
+              {" "}
+              <div>Watch List</div>
+            </Link>
             <div>About</div>
           </div>
         </div>

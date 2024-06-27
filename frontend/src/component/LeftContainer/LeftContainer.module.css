@@ -1,0 +1,138 @@
+.leftContainer {
+  width: 25%;
+  height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #09041d, rgb(18, 18, 73));
+  /* padding: 15px; */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  color: white;
+  flex-direction: column;
+  border-right: 1px solid black;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-top: 15px;
+  /* border: 2px solid black; */
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.homeContainer {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  /* border: 2px solid black; */
+  padding: 10px 7px;
+  border-radius: 5px;
+  justify-content: start;
+  /* background: linear-gradient(45deg, #1e0a6b, black); */
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.homeContainer img {
+  width: 50px;
+}
+
+.homeText {
+  font-weight: 700;
+  margin-left: 10%;
+}
+
+.watchListButton {
+  padding: 10px 30px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #0691e8, rgb(10, 5, 101));
+  color: white;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  width: 90%;
+  margin-top: 15px;
+}
+
+.listHeading {
+  width: 90%;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  border-left: 5px solid yellow;
+  padding-left: 10px;
+}
+
+.listItems {
+  width: 95%;
+  height: 37vh;
+  /* border: 2px solid white; */
+  overflow: scroll;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  flex-direction: column;
+}
+
+.listItem {
+  width: 90%;
+  background: linear-gradient(45deg, #151516, #070717);
+  /* color: black; */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.listItemlogo {
+  background: white;
+  color: #070717;
+  margin-right: 15px;
+  /* padding: 10px; */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.listItemText {
+  font-size: 0.9rem;
+}
+
+.userProfile {
+  border: 1px solid white;
+  width: 87%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  position: relative;
+}
+
+.userProfile img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.more {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+hr {
+  width: 95%;
+  margin: 20px 0;
+}

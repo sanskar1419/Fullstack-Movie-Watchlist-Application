@@ -7,6 +7,7 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
+import WatchList from "./page/WatchList/WatchList";
 
 function App() {
   const router = createBrowserRouter([
@@ -19,6 +20,10 @@ function App() {
           element: <Home />,
         },
       ],
+    },
+    {
+      path: "watchlist",
+      element: <WatchList />,
     },
   ]);
   return (

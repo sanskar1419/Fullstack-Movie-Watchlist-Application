@@ -1,6 +1,7 @@
 import styles from "./HomeSection.module.css";
 import HomeImage from "../../assets/images/Home_Image.png";
 import HomeImage2 from "../../assets/images/Home_Image2.png";
+import { Link } from "react-router-dom";
 
 function HomeSection() {
   return (
@@ -17,7 +18,9 @@ function HomeSection() {
           Cinema is a matter of what's in the frame and what's out
         </div>
         <div className={styles.buttonContainers}>
-          <button>Go To watchlist Page</button>
+          <Link to="watchlist">
+            <button>Go To watchlist Page</button>
+          </Link>
           <button>Add New Movie</button>
         </div>
       </div>

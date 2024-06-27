@@ -1,0 +1,30 @@
+.searchContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search {
+  width: 85%;
+  padding: 8px 6%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #151516, rgb(8, 7, 29));
+  /* background-image: url(../../assets/images/search-interface-symbol.png); */
+  color: white;
+  opacity: 0.7;
+  text-indent: -999;
+}
+
+.search::placeholder {
+  color: white;
+}
+
+.searchIcon {
+  position: absolute;
+  width: 20px;
+  top: 10px;
+  left: 40px;
+}
