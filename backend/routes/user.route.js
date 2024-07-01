@@ -16,6 +16,12 @@ userRouter.post("/register", userRegistrationDataMiddleware, (req, res) => {
 userRouter.post("/login", (req, res) => {
   userController.signIn(req, res);
 });
+userRouter.get("/", (req, res) => {
+  userController.getUser(req, res);
+});
+userRouter.get("/watchLists/", (req, res) => {
+  userController.getUserWatchLists(req, res);
+});
 
 // Exporting userRouter
 export default userRouter;

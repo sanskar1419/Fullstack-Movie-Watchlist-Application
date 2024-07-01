@@ -20,16 +20,24 @@ export default class UserController {
       const newUser = new UserModel(name, email, userName, hashPassword);
       const createdRecord = await this.userRepository.add(newUser);
       if (!createdRecord) {
-        res.status(409).send("User Name Already exist");
+        res.status(409).json({ error: "User Name Already exist" });
       } else {
-        res.status(201).send({
+        res.status(201).json({
           Message: "User Registered",
-          User: createdRecord,
+          User: {
+            name: createdRecord.name,
+            userName: createdRecord.userName,
+            email: createdRecord.email,
+            watchLists: createdRecord.watchLists,
+            createdAt: createdRecord.createdAt,
+          },
         });
       }
     } catch (error) {
       console.log(error);
-      throw new Error("Something went wrong with database");
+      res.status(500).json({
+        error: "Internal Server Error",
+      });
     }
   }
 
@@ -39,7 +47,7 @@ export default class UserController {
       const { userName, password } = req.body;
       const user = await this.userRepository.findUser(userName);
       if (!user) {
-        return res.status(400).send("Invalid Credentials");
+        return res.status(400).json({ error: "Invalid Credentials" });
       }
       const passwordMatch = await bcrypt.compare(password, user.password);
       if (passwordMatch) {
@@ -53,13 +61,55 @@ export default class UserController {
             expiresIn: "1h",
           }
         );
-        res.status(200).send(token);
+        res.status(200).json({ token: token });
       } else {
-        return res.status(401).send("Invalid Credentials");
+        return res.status(401).json({ error: "Invalid Credentials" });
       }
     } catch (error) {
       console.log(error);
-      throw new Error("Something went wrong with database");
+      res.status(500).json({
+        error: "Internal Server Error",
+      });
+    }
+  }
+
+  async getUser(req, res) {
+    try {
+      const userName = req.query.userName;
+      const user = await this.userRepository.findUser(userName);
+      if (!user) {
+        return res.status(400).json({ error: "Something went wrong" });
+      }
+      return res.status(200).json({
+        name: user.name,
+        userName: user.userName,
+        email: user.email,
+        watchLists: user.watchLists,
+        createdAt: user.createdAt,
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({
+        error: "Internal Server Error",
+      });
+    }
+  }
+
+  async getUserWatchLists(req, res) {
+    try {
+      const userName = req.query.userName;
+      const user = await this.userRepository.findUser(userName);
+      if (!user) {
+        return res.status(400).json({ error: "Something went wrong" });
+      }
+      return res.status(200).json({
+        watchLists: user.watchLists,
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({
+        error: "Internal Server Error",
+      });
     }
   }
 }
