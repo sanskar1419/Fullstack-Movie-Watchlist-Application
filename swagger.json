@@ -1,0 +1,103 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "description": "Our Resume Builder web app is a comprehensive tool designed to streamline the process of creating professional resumes.",
+    "title": "WowResume Rest API"
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8000"
+    }
+  ],
+
+  "components": {
+    "securitySchemes": {
+      "JWT": {
+        "in": "header",
+        "name": "Authorization",
+        "type": "apiKey"
+      }
+    }
+  },
+
+  "paths": {
+    "/api/user/register": {
+      "post": {
+        "tags": ["Users"],
+        "summary": "Register User",
+        "description": "User registration on the application",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "userName": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "confirmPassword": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User Registered"
+          },
+          "409": {
+            "description": "User Name Already exist"
+          },
+          "400": {
+            "description": "Validation Error"
+          }
+        }
+      }
+    },
+
+    "/api/user/login": {
+      "post": {
+        "tags": ["Users"],
+        "summary": "Login User",
+        "description": "User login to get token",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userName": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Invalid Credentials"
+          }
+        }
+      }
+    }
+  }
+}
