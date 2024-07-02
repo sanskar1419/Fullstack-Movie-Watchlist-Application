@@ -16,9 +16,11 @@ userRouter.post("/register", userRegistrationDataMiddleware, (req, res) => {
 userRouter.post("/login", (req, res) => {
   userController.signIn(req, res);
 });
+// Query Parameter
 userRouter.get("/", (req, res) => {
   userController.getUser(req, res);
 });
+// Query Parameter
 userRouter.get("/watchLists/", (req, res) => {
   userController.getUserWatchLists(req, res);
 });
