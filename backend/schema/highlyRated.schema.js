@@ -6,7 +6,7 @@ const highlyRaredMovieSchema = new mongoose.Schema(
   {
     movie: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "movie",
+      ref: "Movie",
     },
   },
   {

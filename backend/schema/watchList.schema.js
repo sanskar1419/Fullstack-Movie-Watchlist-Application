@@ -15,12 +15,12 @@ const watchListScheme = new mongoose.Schema(
     watchListItem: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "movie",
+        ref: "Movie",
       },
     ],
     userId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "user",
+      ref: "User",
     },
   },
   {

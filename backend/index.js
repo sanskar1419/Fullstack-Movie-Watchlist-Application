@@ -8,6 +8,7 @@ import apiDocs from "../swagger.json" assert { type: "json" };
 import userRouter from "./routes/user.route.js";
 import popularMovieRouter from "./routes/popularMovie.route.js";
 import movieRouter from "./routes/movie.route.js";
+import top10MovieRouter from "./routes/top10.route.js";
 
 // Initializing Express
 const app = new express();
@@ -26,6 +27,7 @@ app.use(bodyParser.json());
 app.use("/api/user", userRouter);
 app.use("/api/movie", movieRouter);
 app.use("/api/popularMovie", popularMovieRouter);
+app.use("/api/top10Movie", top10MovieRouter);
 
 app.use("/api-docs", swagger.serve, swagger.setup(apiDocs));
 

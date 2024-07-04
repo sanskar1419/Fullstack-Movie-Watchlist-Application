@@ -6,7 +6,7 @@ const top10MovieSchema = new mongoose.Schema(
   {
     movie: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "movie",
+      ref: "Movie",
     },
   },
   {
