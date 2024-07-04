@@ -16,7 +16,7 @@ export default class PopularMovieController {
         return res.status(500).json({ error: "Something went wrong" });
       }
       return res.status(200).json({
-        ...data,
+        popularMovies: [...data],
       });
     } catch (error) {
       console.log(error);
@@ -28,13 +28,13 @@ export default class PopularMovieController {
 
   async add(req, res) {
     try {
-      const movieId = req.query.id;
+      const movieId = req.query.movieID;
       const data = await this.popularMovieRepository.addPopularMovie(movieId);
       if (!data) {
         return res.status(500).json({ error: "Something went wrong" });
       }
       return res.status(200).json({
-        data,
+        message: "Movie Added Successfully!!!!!",
       });
     } catch (error) {
       console.log(error);
