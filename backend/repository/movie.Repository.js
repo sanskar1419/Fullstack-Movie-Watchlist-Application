@@ -8,7 +8,7 @@ export default class MovieRepository {
   // Method for finding doctor based on user name
   async get() {
     try {
-      return await Movie.find({});
+      return await Movie.find({}).populate({ path: "similarMovieItem" });
     } catch (error) {
       console.log(error);
       res.status(500).json({

@@ -64,7 +64,7 @@ const movieSchema = new mongoose.Schema(
     similarMovieItem: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "movie",
+        ref: "Movie",
       },
     ],
   },
